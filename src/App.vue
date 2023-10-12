@@ -20,7 +20,7 @@ export default {
         .then(result =>{
           // store.cardList = result.data
           console.log(result.data);
-          store.cardList = result.data
+          store.cardList = result.data.data
         })
         .catch(error => {
           console.log(error);
