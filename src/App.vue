@@ -2,10 +2,14 @@
 import { store } from './data/store';
 import axios from 'axios';
 import Header from './components/Header.vue';
+import Result from './components/Result.vue';
+import CardContainer from './components/CardContainer.vue';
 export default {
   name:'App',
   components: {
     Header,
+    Result,
+    CardContainer
   },
   data(){
     return{
@@ -35,6 +39,8 @@ export default {
 
 <template>
   <Header/>
+  <Result/>
+  <CardContainer/>
 </template>
 
 
