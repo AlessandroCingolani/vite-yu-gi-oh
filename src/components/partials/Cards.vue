@@ -1,16 +1,21 @@
 <script>
 export default {
-  name:'Cards'
+  name:'Cards',
+  props:{
+    img: String,
+    name: String,
+    type: String
+  }
 }
 </script>
 
 
 <template>
   <div class="my_col">
-    <div class="sc-card">
-      <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="..">
-      <h6>A CELL BREDING DEVICE</h6>
-      <p>Alien</p>
+    <div class="my_card">
+      <img :src="img">
+      <h6>{{ name }}</h6>
+      <p>{{ type }}</p>
     </div>
   </div>
 </template>
@@ -25,7 +30,7 @@ export default {
 .my_col {
   width: 20%;
 }
-.sc-card{
+.my_card{
   background-color: $background-orange;
   text-align: center;
   img{

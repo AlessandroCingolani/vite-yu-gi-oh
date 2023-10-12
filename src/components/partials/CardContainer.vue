@@ -1,4 +1,5 @@
 <script>
+import { store } from '../../data/store';
 import Cards from './Cards.vue';
 import Result from './Result.vue';
 export default {
@@ -6,6 +7,14 @@ export default {
   components:{
     Cards,
     Result
+  },
+  data(){
+    return{
+      store
+    }
+  },
+  mounted(){
+    console.log(store.cardList);
   }
 }
 </script>
@@ -15,7 +24,14 @@ export default {
   <div class="container mt-4">
     <Result/>     
     <div class="row">
-      <Cards/>
+      <Cards
+      v-for="card in store.cardList"
+      :key ="card.id"
+      :img = "card.card_images"
+      :name = "card.name"
+      :type = "card.archetype"
+
+      />
     </div>
 
   </div>
