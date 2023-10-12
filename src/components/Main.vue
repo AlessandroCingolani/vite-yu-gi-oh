@@ -33,7 +33,6 @@ export default {
     padding-top: 20px;
     select {
       width: 150px;
-      margin-bottom: 20px;
     }
   }
 </style>
