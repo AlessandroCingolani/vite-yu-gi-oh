@@ -6,7 +6,7 @@ export default {
 
 
 <template>
-  <div class="col-2">
+  <div class="my_col">
     <div class="sc-card">
       <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="..">
       <h6>A CELL BREDING DEVICE</h6>
@@ -21,10 +21,13 @@ export default {
 @use '../../../scss/partials/vars' as *;
 @use '../../../scss/partials/general' as *;
 
+
+.my_col {
+  width: 20%;
+}
 .sc-card{
   background-color: $background-orange;
   text-align: center;
-  
   img{
     max-width:100% ;
     margin-bottom: 10px;
