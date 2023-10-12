@@ -7,7 +7,7 @@ export default {
 
 <template>
   <div class="result">
-    <span>found card:</span>
+    <span>Found 39 card</span>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
   width: 100%;
   color: white;
   background-color:$background-result ;
+  padding: 10px;
 }
 
 </style>
