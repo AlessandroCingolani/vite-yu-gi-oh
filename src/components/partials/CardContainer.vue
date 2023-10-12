@@ -14,6 +14,7 @@ export default {
     }
   },
   mounted(){
+
     console.log(store.cardList);
   }
 }
@@ -27,7 +28,7 @@ export default {
       <Cards
       v-for="card in store.cardList"
       :key ="card.id"
-      :img = "card.card_images"
+      :img = "card.card_images[0].image_url"
       :name = "card.name"
       :type = "card.archetype"
 
