@@ -12,7 +12,7 @@ export default {
 
 
 <template>
-  <div class="container my-5">
+  <div class="container mt-4">
     <Result/>     
     <div class="row">
       <Cards/>
@@ -25,9 +25,11 @@ export default {
 
 <style lang="scss" scoped>
 
-  .row {
+
+
+  .container {
     background-color: white;
-    
+    padding: 30px;
   }
 
 </style>
