@@ -42,11 +42,9 @@ export default {
 
 <style lang="scss" scoped>
 
-
-
   .container {
     background-color: white;
-    padding: 30px;
+    padding: 40px 30px 0 30px;
   }
 
 </style>
