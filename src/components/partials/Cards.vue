@@ -6,11 +6,17 @@ export default {
 
 
 <template>
-  <div>Cards</div>
+  <div class="col">
+    <div class="card">
+      a
+    </div>
+  </div>
 </template>
 
 
 
-<style>
+<style lang="scss" scoped>
+
+
 
 </style>
