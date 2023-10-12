@@ -7,7 +7,7 @@ export default {
 
 <template>
   <div class="result">
-    <p>found card:</p>
+    <span>found card:</span>
   </div>
 </template>
 
