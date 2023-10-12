@@ -1,7 +1,10 @@
-# Vue 3 + Vite
+# Vite Yu-Gi-Oh
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Create un nuovo progetto utilizzando Vite e Vue 3 e definite i componenti necessari per strutturare il layout come da screenshot allegato.
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1. Pulisco css e componenti non necessari importo scss bootstrap e axios per dipendenze.
+2. Creo stili scss un main dove importo tutti stili partials, \_general, \_var.
+3. Creo miei componenti seguendo layou da replicare un Header, Result,Contenitore delle card,Card singole.
+4. Creo il mio store.js per lo state management dove importerò la mia API , poi creo un array vuoto dove aggiornerò tramite App.vue il suo contenuto.
+5. Utilizzo array di oggetti dove mi serve richiamando store e per le card singole userò dei props ereditati dal genitore per prendere chiavi specifiche da utilizzare
+6. Dopo aver provato con un mark up statico la mia card stampo dinamicamente nel contenitore delle card
