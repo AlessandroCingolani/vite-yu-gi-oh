@@ -1,13 +1,27 @@
 <script>
+import { store } from '../../data/store';
 export default {
-  name:'Result'
+  name:'Result',
+  data(){
+    return{
+      store
+    }
+  },
+  computed:{
+    outputResult(){
+      if(store.cardList.length > 0){
+        return 'Found ' + store.cardList.length + ' cards';
+      }
+      return 'Cards no found';
+    }
+  }
 }
 </script>
 
 
 <template>
   <div class="result">
-    <span>Found 39 card</span>
+    <span>{{ outputResult }}</span>
   </div>
 </template>
 

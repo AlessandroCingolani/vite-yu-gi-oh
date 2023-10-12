@@ -29,10 +29,12 @@ export default {
 
 .my_col {
   width: 20%;
+  margin-bottom: 15px;
 }
 .my_card{
   background-color: $background-orange;
   text-align: center;
+  height: 100%;
   img{
     max-width:100% ;
     margin-bottom: 10px;
