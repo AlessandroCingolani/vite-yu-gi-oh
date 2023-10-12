@@ -11,6 +11,23 @@ export default {
     return{
       store
     }
+  },
+  methods:{
+    getApi(){
+      axios.get(store.apiUrl)
+        .then(result =>{
+          // store.cardList = result.data
+          console.log(result.data);
+          store.cardList = result.data
+        })
+        .catch(error => {
+          console.log(error);
+        })
+    }
+  },
+  mounted(){
+    this.getApi();
+    console.log(store.cardList);
   }
 }
 </script>
