@@ -16,6 +16,7 @@ export default {
   },
   methods:{
     getApi(){
+      store.isLoading = true;
       axios.get(store.apiUrl,{
         params:{
           archetype:store.research
@@ -23,10 +24,12 @@ export default {
       })
         .then(result =>{
           store.cardList = result.data.data
+          store.isLoading = false;
 
         })
         .catch(error => {
           console.log(error);
+          store.isLoading = false;
         })
     },
     getApiType(){
