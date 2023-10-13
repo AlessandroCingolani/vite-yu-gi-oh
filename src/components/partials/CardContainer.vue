@@ -13,10 +13,6 @@ export default {
       store
     }
   },
-  mounted(){
-
-    console.log(store.cardList);
-  }
 }
 </script>
 
