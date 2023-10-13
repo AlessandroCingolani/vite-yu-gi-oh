@@ -17,15 +17,19 @@ export default {
   methods:{
     getApi(){
       store.isLoading = true;
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl,{
+        params:{
+          archetype:store.research
+        }
+      })
         .then(result =>{
           store.cardList = result.data.data
           store.isLoading = false;
-          
         })
         .catch(error => {
           console.log(error);
           store.isLoading = false;
+          store.cardList = [];
         })
     },
     getApiType(){
@@ -39,20 +43,7 @@ export default {
           console.log(error);
         })
     },
-    getSelection(){
-      store.isLoading = true;
-      axios.get(store.apiUrl + `?archetype=${store.research}`)
-        .then(result =>{
-          store.cardList = result.data.data
-          store.isLoading = false;
-          
-        })
-        .catch(error => {
-          console.log(error);
-          store.isLoading = false;
-        })
-    },
-
+    
   },
   mounted(){
     this.getApi();
@@ -64,7 +55,7 @@ export default {
 
 <template>
   <Header/>
-  <Main @changeResearch="getSelection"/>
+  <Main @changeResearch="getApi"/>
 </template>
 
 
