@@ -17,18 +17,17 @@ export default {
   methods:{
     getApi(){
       axios.get(store.apiUrl,{
-        params:{
-          archetype: store.research
-        }
+        // params:{
+        //   archetype: store.research
+        // }
       })
         .then(result =>{
-          store.cardList = result.data
           console.log(result.data);
           store.cardList = result.data.data
 
-          store.charctersList.forEach( char => {
-            if(!store.statusList.includes(char.status)){
-              store.statusList.push(char.status)
+          store.cardList.forEach( type => {
+            if(!store.archetypeList.includes(type.archetype)){
+              store.archetypeList.push(type.archetype)
             }
           })
 

@@ -24,7 +24,9 @@ export default {
       class="form-select form-select-sm" 
       aria-label="Small select example"
       >
-        <option v-for="(arch, index) in store.archetypeList"
+          <option  selected value="">Select Archtype</option>
+          <option
+            v-for="(arch, index) in store.archetypeList"
             :key="index"
             :value="arch"
           >{{ arch }}
