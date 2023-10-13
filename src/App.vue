@@ -16,11 +16,22 @@ export default {
   },
   methods:{
     getApi(){
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl,{
+        params:{
+          archetype: store.research
+        }
+      })
         .then(result =>{
-          // store.cardList = result.data
+          store.cardList = result.data
           console.log(result.data);
           store.cardList = result.data.data
+
+          store.charctersList.forEach( char => {
+            if(!store.statusList.includes(char.status)){
+              store.statusList.push(char.status)
+            }
+          })
+
         })
         .catch(error => {
           console.log(error);
@@ -30,6 +41,7 @@ export default {
   mounted(){
     this.getApi();
     console.log(store.cardList);
+    console.log(store.archetypeList);
   }
 }
 </script>
@@ -37,7 +49,7 @@ export default {
 
 <template>
   <Header/>
-  <Main/>
+  <Main @changeResearch="getApi"/>
 </template>
 
 
