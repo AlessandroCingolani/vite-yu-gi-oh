@@ -32,8 +32,6 @@ export default {
           >{{ arch }}
 
         </option>
-        <option value="Sinful Spoils">Sinful Spoils</option>
-        <option value="Melodious">Melodious</option>
       </select>
       <CardContainer/>
     </div>

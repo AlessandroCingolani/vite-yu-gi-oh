@@ -17,9 +17,9 @@ export default {
   methods:{
     getApi(){
       axios.get(store.apiUrl,{
-        // params:{
-        //   archetype: store.research
-        // }
+         params:{
+          archetype: store.research
+        }
       })
         .then(result =>{
           console.log(result.data);
