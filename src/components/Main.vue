@@ -28,8 +28,8 @@ export default {
           <option
             v-for="(arch, index) in store.archetypeList"
             :key="index"
-            :value="arch"
-          >{{ arch }}
+            :value="arch.archetype_name"
+          >{{ arch.archetype_name }}
 
         </option>
       </select>

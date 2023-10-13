@@ -17,21 +17,25 @@ export default {
   methods:{
     getApi(){
       axios.get(store.apiUrl,{
-         params:{
-          archetype: store.research
+        params:{
+          archetype:store.research
         }
       })
         .then(result =>{
-          console.log(result.data);
           store.cardList = result.data.data
 
-          store.cardList.forEach( type => {
-            if(!store.archetypeList.includes(type.archetype)){
-              store.archetypeList.push(type.archetype)
-            }
-          })
+        })
+        .catch(error => {
+          console.log(error);
+        })
+    },
+    getApiType(){
+      axios.get(store.typeUrl)
+        .then(result =>{
+          store.archetypeList = result.data
 
         })
+  
         .catch(error => {
           console.log(error);
         })
@@ -39,8 +43,7 @@ export default {
   },
   mounted(){
     this.getApi();
-    console.log(store.cardList);
-    console.log(store.archetypeList);
+    this.getApiType();
   }
 }
 </script>
