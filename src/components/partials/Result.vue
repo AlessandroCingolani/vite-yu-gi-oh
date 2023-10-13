@@ -20,7 +20,8 @@ export default {
 
 
 <template>
-  <div class="result">
+  <div v-if="store.isLoading" class="result">Searching...</div>
+  <div v-else class="result">
     <span>{{ outputResult }}</span>
   </div>
 </template>
