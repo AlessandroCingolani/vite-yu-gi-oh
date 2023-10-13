@@ -12,7 +12,7 @@ export default {
       if(store.cardList.length > 0){
         return 'Found ' + store.cardList.length + ' cards';
       }
-      return 'Cards no found';
+      return 'Cards not found';
     }
   }
 }
