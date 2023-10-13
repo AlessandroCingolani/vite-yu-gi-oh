@@ -1,9 +1,15 @@
 <script>
+import { store } from '../data/store';
 import CardContainer from './partials/CardContainer.vue';
 export default {
   name:'Main',
   components:{
     CardContainer
+  },
+  data(){
+    return{
+      store
+    }
   }
 }
 </script>
@@ -12,11 +18,20 @@ export default {
 <template>
   <main>
     <div class="my_container">
-      <select class="form-select form-select-sm" aria-label="Small select example">
-        <option selected>Alien</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+      <select 
+      @change="$emit('changeResearch')" 
+      v-model="store.research"
+      class="form-select form-select-sm" 
+      aria-label="Small select example"
+      >
+        <option v-for="(arch, index) in store.archetypeList"
+            :key="index"
+            :value="arch"
+          >{{ arch }}
+
+        </option>
+        <option value="Sinful Spoils">Sinful Spoils</option>
+        <option value="Melodious">Melodious</option>
       </select>
       <CardContainer/>
     </div>
